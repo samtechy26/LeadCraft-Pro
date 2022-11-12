@@ -1,4 +1,5 @@
 {% load static %}
+{% load tailwind_tags %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,11 +7,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DJCRM</title>
-    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+    {% tailwind_css %}
 </head>
 <body>
     <div class="max-w-7xl mx-auto">
+
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{% if message.tags == 'success' %}bg-green-500 text-white{% endif %}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
         {% include 'navbar.html' %}
         {% block content %}
         {% endblock content %}

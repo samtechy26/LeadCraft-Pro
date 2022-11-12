@@ -1,6 +1,6 @@
 from pathlib import Path
 import environ
-import os
+
 
 env = environ.Env(
     DEBUG=(bool, False)
@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     #THIRD PARTY APPS
     'crispy_forms',
     "crispy_tailwind",
+    'tailwind',
+    'theme',
+    'django_browser_reload',
 
     #LOCAL APPS
     'leads',
@@ -46,6 +49,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware",
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -163,3 +167,12 @@ if not DEBUG:
     X_FRAME_OPTIONS = "DENY"
 
     ALLOWED_HOSTS = ["*"]
+
+
+TAILWIND_APP_NAME = 'theme'
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+
+NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
