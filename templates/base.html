@@ -1,4 +1,5 @@
 {% load static %}
+{% load tailwind_tags %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,12 +7,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DJCRM</title>
-    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+    {% tailwind_css %}
 </head>
 <body>
     <div class="max-w-7xl mx-auto">
         {% include 'navbar.html' %}
+        {% include 'messages.html' %}
         {% block content %}
         {% endblock content %}
     </div>
