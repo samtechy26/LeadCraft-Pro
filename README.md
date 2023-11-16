@@ -1,20 +1,53 @@
-# django-crm
+# LeadCraft Pro
 
-A django Client Relations Manager with role based authentication and authorization
+Welcome to the Customer Relations Manager (CRM) project built with Django and PostgreSQL. This CRM system is designed to streamline customer interactions, allowing administrators to manage leads, sales agents to track and update leads, and overall facilitating effective customer relationship management.
 
-License: MIT
-## Basic Commands
+## Features
 
-### Setting Up Your Users
+### 1. Lead Management
 
--   To create a **normal user account**, just go to Sign Up and fill out the form. Once you submit it, you'll see a "Verify Your E-mail Address" page. Go to your console to see a simulated email verification message. Copy the link into your browser. Now the user's email should be verified and ready to go.
+- **Create:** Administrators can add new leads to the system.
+- **Read:** View detailed information about leads.
+- **Update:** Modify lead details as needed.
+- **Delete:** Remove leads that are no longer relevant.
 
--   To create a **superuser account**, use this command:
+### 2. Sales Agent Interaction
 
-        $ python manage.py createsuperuser
+- **View Leads:** Sales agents can access a list of leads for effective communication.
+- **Mark as Converted:** Sales agents can mark leads as converted or not, updating the status of potential deals.
 
-For convenience, you can keep your normal user logged in on Chrome and your superuser logged in on Firefox (or similar), so that you can see how the site behaves for both kinds of users.
+### 3. Administrator Control
 
-## Deployment
+- **Manage Sales Agents:** Administrators have the ability to add or remove sales agents, ensuring efficient team management.
 
-The following details how to deploy this application.
+## Technologies Used
+
+- **Django:** The high-level Python web framework that encourages rapid development and clean, pragmatic design.
+- **PostgreSQL:** A powerful, open-source relational database system for storing and retrieving data.
+
+## Getting Started
+
+To run the project locally, follow these steps:
+
+1. Clone the repository: `git clone https://github.com/yourusername/crm-project.git`
+2. Navigate to the project directory: `cd djcrm`
+3. Install dependencies: `pip install -r requirements.txt`
+4. Set up the PostgreSQL database and update the database configuration in the `settings.py` file.
+5. Apply migrations: `python manage.py migrate`
+6. Create a superuser account: `python manage.py createsuperuser`
+7. Run the development server: `python manage.py runserver`
+
+Access the application at `http://localhost:8000` and the admin panel at `http://localhost:8000/admin` using the superuser credentials.
+
+## Usage
+
+1. Log in as an administrator to manage leads and sales agents.
+2. Sales agents can log in to view leads and update their status.
+
+## Contributions
+
+Contributions are welcome! If you have suggestions, improvements, or bug fixes, please create a new issue or submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
