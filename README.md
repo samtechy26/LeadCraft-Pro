@@ -29,7 +29,7 @@ Welcome to the Customer Relations Manager (CRM) project built with Django and Po
 
 To run the project locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/yourusername/crm-project.git`
+1. Clone the repository: `git clone https://github.com/samtechy26/LeadCraft-Pro.git`
 2. Navigate to the project directory: `cd djcrm`
 3. Install dependencies: `pip install -r requirements.txt`
 4. Set up the PostgreSQL database and update the database configuration in the `settings.py` file.
