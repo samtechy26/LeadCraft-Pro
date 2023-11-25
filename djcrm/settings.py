@@ -173,13 +173,16 @@ if not DEBUG:
     SECURE_HSTS_PRELOAD = True
     X_FRAME_OPTIONS = "DENY"
 
-    ALLOWED_HOSTS = ["*"]
+    ALLOWED_HOSTS = ["web-production-35ff.up.railway.app",
+                     "127.0.0.1",
+                    ]
 
 
 TAILWIND_APP_NAME = "theme"
 
 INTERNAL_IPS = [
     "127.0.0.1",
+    "web-production-35ff.up.railway.app"
 ]
 
 NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
