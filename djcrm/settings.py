@@ -173,9 +173,7 @@ if not DEBUG:
     SECURE_HSTS_PRELOAD = True
     X_FRAME_OPTIONS = "DENY"
 
-    ALLOWED_HOSTS = ["web-production-35ff.up.railway.app",
-                     "127.0.0.1",
-                    ]
+ALLOWED_HOSTS = ["web-production-35ff.up.railway.app", "127.0.0.1"]
 
 
 TAILWIND_APP_NAME = "theme"
